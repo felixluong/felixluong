@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/felixluong.css">
+    <script>
+    $(document).ready(function() {
+        $('#ggscholar_nav_button').click(function() {
+        window.open($(this).attr('href'), '_blank');
+        return false; // cancel the event
+        });
+        $('#linkedin_nav_button').click(function() {
+        window.open($(this).attr('href'), '_blank');
+        return false; // cancel the event
+        });
+        $('#pp_link').click(function() {
+        window.open($(this).attr('href'), '_blank');
+        return false; // cancel the event
+        });
+    });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Felix Luong</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#portfolio">Project</a>
+            <a id="ggscholar_nav_button" href="https://scholar.google.com.au/citations?user=MYkms04AAAAJ&hl=en">Google Scholar</a>
+            <a id="linkedin_nav_button" href="https://www.linkedin.com/in/phuc-luong-23453187/">LinkedIn</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Machine Learning and Artificial Intelligence<br/>Research Scientist</h2>
+        <p class="summary" style="text-align: justify;">I am passionate about applying machine learning and AI to solve real-world problems, particularly in the fields of material science and finance. My work focuses on developing innovative algorithms and models that enhance decision-making processes and accelerate discovery. Additionally, I am interested in multi-modal AI and AI assisstant in health-care.</p>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2>My Projects</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="aiml">Machine Learning & AI</button>
+            <button class="filter-btn" data-filter="personal">Personal</button>
+            <button class="filter-btn" data-filter="publication">Publications</button>
+        </div>
+        <div class="project-list">
+            <div class="project-item" data-category="aiml">
+                <div class="project-hex-wrap">
+                    <div class="project-hex">
+                        <img src="resources/gp_viz.png" alt="GP Visualization">
+                        <!-- <img src="https://source.unsplash.com/random/200x200/?coding" alt="Coding Project"> -->
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Bayesian Optimization</h3>
+                    <p style="text-align: justify;">Bayesian optimization (BO) is a powerful framework to quickly search for near-optimal solutions and accelerate discovery process. It is widely applied in material design, hyper-parameter tuning, and combinatorial optimization. This project aims to solve fundamental problems of BO when using Gaussian process as a surrogate model. The project includes following modules:</p>
+                    <itemize>
+                        <li>Development of a Bayesian optimization approach to handle discrete input data. [<a id="pp_link" href="https://link.springer.com/chapter/10.1007/978-3-030-35288-2_38">paper</a>]</li>
+                        <li>Missing data imputation for refining historical data. [<a id="pp_link" href="https://link.springer.com/chapter/10.1007/978-3-030-67661-2_41">paper</a>]</li>
+                        <li>Selection of the optimal strategy in cost restriction settings using a multi-armed bandits algorithm. [<a id="pp_link" href="https://www.sciencedirect.com/science/article/abs/pii/S0950705121007437">paper</a>]</li>
+                    </itemize>
+                </div>
+            </div>
+            <div class="project-item" data-category="aiml">
+                <div class="project-hex-wrap">
+                    <div class="project-hex">
+                        <img class="materials" src="resources/materials-science.png" alt="Materials Science">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Applied Machine Learning in Material Science</h3>
+                    <p style="text-align: justify;">Machine learning techniques provide great support to reduce human workload and encourage automation, especially for tasks which require high precision. In this project, the target is to predict high throughput materials, e.g., efficient solar cells and thermal conductors, and accelerate discovery process of novel materials, e.g., new crystalline materials. This project has two aims:</p>
+                    <itemize>
+                        <li>Batch experiments recommendation for Metal-Organic Frameworks (MOFs).</li>
+                        <li>Uncertainty quantification for high-quality material prediction.</li>
+                    </itemize>
+                </div>
+            </div>
+            <div class="project-item" data-category="aiml">
+                <div class="project-hex-wrap">
+                    <div class="project-hex">
+                        <img class="timeseries" src="resources/time_series_icon.png" alt="UI Design">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Time-series prediction and optimization</h3>
+                    <p>Continuous-time prediction is a compelling and critical concept in real-time applications, particularly within the financial sector. This project involves forecasting dynamic data streams as they evolve, enabling rapid decision-making in environments where timing is paramount. By leveraging advanced models and real-time data processing, the project aim to support applications such as high-frequency trading, risk management, and portfolio optimization, driving efficiency and informed strategies in fast-paced markets. Two current focused topics in this project are</p>
+                    <itemize>
+                        <li>Accelerating large portfolio optimization.</li>
+                        <li>Stock prices forecasting.</li>
+                    </itemize>
+                </div>
+            </div>
+            <div class="project-item" data-category="aiml">
+                <div class="project-hex-wrap">
+                    <div class="project-hex">
+                        <img src="resources/ai.png" alt="Multi-model AI">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Multi-modal AI</h3>
+                    <p>My current research interests in this topic include AI assistants for personal purposes and health-care systems. The combination of computer vision, language models, and generative AI forms the generic framework for AI in the future.</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="personal">
+                <div class="project-hex-wrap">
+                    <div class="project-hex">
+                        <img class="workhist" src="resources/workhist.png" alt="Work History">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Work History</h3>
+                    <itemize>
+                        <li>Casual Teaching - RMIT - Mar 2025 - Present</li>
+                        <li>Research Fellow - Monash University - Aug 2021 - Oct 2024</li>
+                        <li>AI/ML Engineer - Lensell Group - Jan 2021 - Present</li>
+                    </itemize>
+                    <h3>Education</h3>
+                    <itemize>
+                        <li>PhD in Computer Science - Deakin University - 2018 - 2021</li>
+                        <li>Master of Information Science - Japan Advanced Institute of Science and Technology (JAIST) - 2015 - 2017</li>
+                        <li>Bachelor of Computer Science - University of Science, Vietnam National University HCM - 2009 - 2014</li>
+                    </itemize>
+                </div>
+            </div>
+            <div class="project-item" data-category="personal">
+                <div class="project-hex-wrap">
+                    <div class="project-hex">
+                        <img class="personal" src="resources/achie.png" alt="Personal">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Achievements</h3>
+                    <itemize>
+                        <li>Published a paper in A-ranked ML conference, one paper in the top Games AI conference, two Q1 journal papers, and other papers at international conferences and journals with a current > 100 citations in total.</li>
+                        <li>Student Travel Scholarship at AI 2019 conference - 2019.</li>
+                        <li>PhD scholarship at Applied Artificial Intelligence Institute (A2I2), Deakin University - 2018.</li>
+                        <li>Master scholarship at JAIST, Japan (2015)</li>
+                        <li>Best presentation in <i>JRobot competition</i> an algorithm for controlling the robot - University of Science - 2014.</li>
+                    </itemize>
+                </div>
+            </div>
+            <div class="project-item" data-category="publication">
+                <div class="project-hex-wrap">
+                    <div class="project-hex">
+                        <img class="pubs" src="resources/pubs_icon.png" alt="Publications">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Publications</h3>
+                    <p>See my <a href="https://scholar.google.com.au/citations?user=MYkms04AAAAJ&hl=en">Google Scholar</a> for a full list:</p>
+                    <p><u><b>Conference:</b></u></p>
+                    <ol style="text-align: justify;">
+                        <li>Improving the accuracy of transaction-based ponzi detection on ethereum. In International Conference on Provable Security (pp. 277-287). Singapore: Springer Nature Singapore. Huynh, P. D., Dau, S. H., Li, X., <u>Luong, P.</u>, & Viterbo, E. (2024, September).</li>
+                        <li>Bayesian Optimization with Missing Inputs, European Conference on Machine Learning and Principles and Practices of Knowledge Discovery in Databases (<mark>ECML-PKDD</mark> 2020, Rank A), <u>Phuc Luong</u>, Dang Nguyen, Sunil Kumar Gupta, Santu Rana, Svetha Venkatesh, 2020.</li>
+                        <li>Bayesian Optimization with Discrete Variables, Advances in Artificial Intelligence, 32nd Australasian Joint Conference (AI 2019), <u>Phuc Luong</u>, Sunil Kumar Gupta, Dang Nguyen, Santu Rana, Svetha Venkatesh, 2019.</li>
+                        <li>Learning Human-like Behaviors using NeuroEvolution with Statistical Penalties, 13th Conf on Computational Intelligence and Games (<mark>CIG</mark> 2017), <u>Luong Huu Phuc</u>, Naoto Kanazawa, Kokolo Ikeda, 2017. (Top Game AI conference)</li>
+                        <li>Design and evaluation of a cybersecurity awareness training game. In Entertainment Computing–ICEC 2017: 16th IFIP TC 14 International Conference, Huynh, D., <u>Luong, P.</u>, Iida, H., & Beuran, R. (2017).</li>
+                        <li>Production of Emotion-based Behaviors for a Human-like Computer Player, 17th Conf on Intelligent Games and Simulation (GAME-ON'2016), Sila Temsiririrkkul, <u>Huu-Phuc Luong</u> & Kokolo Ikeda, 2016.</li>
+                    </ol>
+                    <p><u><b>Journal:</b></u></p>
+                    <ol>
+                        <li>Improved Neurophysiological Process Imaging Through Optimization of Kalman Filter Initial Conditions, <mark>Neural Systems</mark>, Yun Zhao, <u>Felix Luong</u>, Simon Teshuva, Andria Pelentritou, William Woods, David Liley, Daniel F. Schmidt, 2023-01-01.</li>
+                        <li>Adaptive Cost-aware Bayesian Optimization, <mark>Knowledge-based System</mark>, <u>Phuc Luong</u>, Dang Nguyen, Sunil Kumar Gupta, Santu Rana, Svetha Venkatesh, 2021. (Q1 Journal)</li>
+                        <li>Optimized cardinality-based generalized itemset mining using transaction ID and numeric encoding, Applied Intelligence, Bac Le, <u>Phuc Luong</u>, 2017.</li>
+                        <li>Algorithmic iterative reticular synthesis of zeolitic imidazolate framework crystals, <mark>Natural Synthesis</mark>. Zihao Chen, <u>Felix Luong</u>, Saumil Chheda, Nhan Luong, Zhiling Zheng, Kevin Greco, Abdullah Alghamdi , K. Huyen Bui, Théo Inizan, Tung Nguyen-Dang, H. Hieu Pham, Dung Le, Joachim Sauer, Viet Bac T. Phung, Jennifer Chayes, Christian Borgs, Mario Boley, Laurent El Ghaoui, Omar Yaghi. (Submitted after minor revision)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Project Image">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+            <p id="modalCategory"></p>
+            <iframe id="modalIFrame" src="" width="100%" overflow="auto"></iframe>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>Contact me at: <i>felix.luong.cs@gmail.com</i> | &copy; 2025 Felix Luong</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Project data
+        const projects = [
+            { title: 'Bayesian Optimization', description: 'A powerful tool to optimize black-box functions.', category: 'AIML', image: 'resources/gp_viz.png', iframe:"resources/bowdv.pdf"},
+            { title: 'Applied Machine Learning in Material Science', description: 'Under development.', category: 'AIML', image: 'resources/materials-science.png', iframe:""},
+            { title: 'Time-series prediction and optimization', description: 'Using machine learning to identify the ideal balance of risk and return that aligns perfectly with your investment goals.', category: 'AIML', image: 'time_series_icon.png', iframe:"resources/returnrisk_plot.png"},
+            { title: 'Multi-modal AI', description: 'Under development.', category: 'AIML', image: 'resources/proj.png', iframe:""}
+        ];
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.dataset.filter;
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        gsap.to(item, { opacity: 1, y: 0, duration: 0.5, display: 'flex' });
+                    } else {
+                        gsap.to(item, { opacity: 0, y: 20, duration: 0.5, display: 'none' });
+                    }
+                });
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('projectModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalIFrame = document.getElementById('modalIFrame');
+        const closeModal = document.querySelector('.close');
+        modalIFrame.style.height = window.innerHeight * 0.7 + 'px';
+
+        projectItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                const project = projects[index];
+                modalImage.src = project.image;
+                modalTitle.textContent = project.title;
+                modalDescription.textContent = project.description;
+                modalCategory.textContent = `Category: ${project.category}`;
+                
+                // if (index == 2) {
+                //     modalIFrame.style.margin = "auto";
+                // }
+
+                modalIFrame.src = project.iframe ? project.iframe : '';
+
+                modal.style.display = 'flex';
+                gsap.from('.modal-content', { y: 100, opacity: 0, duration: 0.5});
+            });
+        });
+        
+        // Click on x icon to close
+        closeModal.addEventListener('click', () => {
+            gsap.to('.modal-content', {
+                y: 0,
+                opacity: 1,
+                duration: 0.5,
+                // onComplete: () => {
+                //     modal.style.display = 'none';
+                // }
+            });
+            modal.style.display = 'none';
+        });
+        // Click outside modal to close
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) {
+                gsap.to('.modal-content', {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    // onComplete: () => {
+                    //     modal.style.display = 'none';
+                    // }
+                });
+                modal.style.display = 'none';
+            }
+        });
+
+        // Initial animation for project list
+        gsap.from('.project-item', {
+            opacity: 0,
+            y: 50,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: 'power2.out'
+        });
+
+        // Dynamic lighting effect on mouse move
+        const hero = document.querySelector('.hero');
+        hero.addEventListener('mousemove', (e) => {
+            const rect = hero.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            hero.style.setProperty('--mouse-x', `${x}px`);
+            hero.style.setProperty('--mouse-y', `${y}px`);
+        });
+
+        projectItems.forEach(item => {
+            const hex = item.querySelector('.project-hex');
+            hex.addEventListener('mousemove', (e) => {
+                const rect = hex.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                hex.style.setProperty('--light-x', `${x}px`);
+                hex.style.setProperty('--light-y', `${y}px`);
+            });
+
+            hex.addEventListener('mouseleave', () => {
+                hex.style.setProperty('--light-x', '0px');
+                hex.style.setProperty('--light-y', '0px');
+            });
+        });
+
+        // Add CSS for dynamic lighting
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = `
+            .hero {
+                --mouse-x: 50%;
+                --mouse-y: 50%;
+            }
+            .hero::before {
+                background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(65, 105, 225, 0.3), transparent 70%);
+            }
+            .project-hex {
+                --light-x: 0px;
+                --light-y: 0px;
+            }
+            .project-hex::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle at var(--light-x) var(--light-y), rgba(65, 105, 225, 0.4), transparent 60%);
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            .project-item:hover .project-hex::before {
+                opacity: 1;
+            }
+        `;
+        document.head.appendChild(styleSheet);
+    </script>
+</body>
+</html>
